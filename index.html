@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Form</title>
+</head>
+<body>
+    <!-- <form action="#" id="form" style="text-align: center;" name="regform" class="form" onsubmit="validateform();">
+            <input type="hidden" id="saveindex">
+            Name:<input type="text" name="name" id="name" maxlength="200"><br><br>
+            Email:<input type="email" name="email" id="email" ><br><br>
+            password:<input type="password" name="pwd" id="pwd" ><br><br>
+            Mobile No. :<input type="tel" name="mobno" id="mobile" maxlength="10"><br><br>
+            Brith Date :<input type="date" name="data" id="b_date"><br><br>
+            <div id="gender">
+            Gender:<input type="radio" name="gender" id="female" value="female">
+            <Label for="female">Female</Label>
+            <input type="radio" name="gender" id="male" value="male">
+            <Label for="male">Male</Label><br><br>
+           </div>
+            Choose City:<select name="city" id="city">
+                <option value="Ahemdabad">Ahemdabad</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Surat">Surat</option>
+                <option value="Bharuch">Bharuch</option>
+            </select><br><br>
+            <div id="lang">
+            Programing Languages:<input type="checkbox" class="input-checkbox" name="lang" id="c" value="C">
+            <label for="C">C</label>
+            <input type="checkbox" name="lang"class="input-checkbox" id="java" value="java">
+            <label for="C">Java</label>
+            <input type="checkbox" name="lang" class="input-checkbox" id="android" value="Android">
+            <label for="C">Android</label><br><br>
+        </div>
+            Address: 
+            <textarea name="address" id="address" cols="30" rows="5"></textarea><br><br>
+            <input type="file" id="img" name="img" accept="image/*"><br><br>
+            <img id="preview">
+            <button type="submit" id="submit" name="submit" onclick="readdata();">Submit</button>
+            <button type="button" id="savebtn" style="display: none; text-align: center;" onclick="saveitem();">Save</button>
+                
+    </form> -->
+    <form  action="#" id="form" style="text-align: center;" name="regform" class="reg_form" >
+        <input type="hidden" id="saveindex">
+        <div class="form">
+       <label for="name">Name</label>
+       <input type="text" name="name" class="form-control" id="name"  placeholder="Enter your name">
+       <p id="name_error" class="error"></p>
+          </div>
+    <div class="form">
+    <label  for="email">Email</label>
+       <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+       <p id="email_error" class="error"></p>
+     </div>
+      <div class="form">
+        <label  for="password">Password:</label>
+       <input type="password" name="pwd" class="form-control" placeholder="Enter your password" id="pwd">
+       <p id="pwd_error" class="error"></p>
+     </div>
+     <div class="form">
+         <label  for="mobile-no">Mobile No:</label>
+        <input type="tel" name="mobile" class="form-control" id="mobile" placeholder="Enter your Mobile No" maxlength="10">
+        <p id="mobile_error" class="error"></p>
+      </div>
+      <div class="form">
+         <label  for="brithdate">Brithdate:</label>
+        <input type="date" name="b_date" class="form-control" id="b_date">
+        <p id="bdate_error" class="error"></p>
+      </div>
+      <div class="form">
+       <label>Gender:</label>
+       <label>
+         <input name="gender" value="Female" type="radio" class="radio" >Female</label>
+       <label>
+         <input name="gender" value="Male" type="radio" class="radio" >Male</label>
+         <label id="gender_error" class="error"></label>
+     </div>
+     
+     <div class="form">
+         <label>City:</label>
+        <select name="city" class="form-control dropdown" id="city">
+         <option value="" disabled="" selected="">Select Your City</option>
+         <option value="Ahemdabad">Ahemdabad</option>
+         <option value="Bhavnagar">Bhavnagar</option>
+         <option value="Surat">Surat</option>
+         <option value="Bharuch">Bharuch</option>
+        </select>
+        <p id="city_error" class="error"></p>
+      </div>
+      <div class="form">
+        <label>Programming Languages:</label>
+        <label for="C"><input type="checkbox" class="input-checkbox" name="lang" id="c" value="C">C</label>
+        <label for="Java"><input type="checkbox" name="lang"class="input-checkbox" id="java" value="java">Java</label>
+        <label for="Android"><input type="checkbox" name="lang" class="input-checkbox" id="android" value="Android">Android</label> 
+        <p id="lang_error" class="error"></p>    
+      </div>
+       <div class="form">
+    <label id="textarea-label" for="text-area">Address: </label>
+         <textarea id="address" class="input-textarea" name="comment" placeholder="Enter your Address here..."></textarea>
+         <p id="address_error" class="error"></p>
+       </div>
+       <div class="form">
+           <input type="file" id="img" name="img" class="form-control" accept="image/*" onchange="imageValidate()">
+           <p id="img_error" class="error"></p>
+            </div>
+      <div class="form">
+       <button type="button" id="submit" class="submit-btn text-align" onclick="readdata();"> Submit</button>
+     </div>
+     <div class="form">
+         <button type="button" id="savebtn" class="submit-btn text-align"  style="display: none;" onclick="saveitem();">Save</button>
+       </div>
+     </form>
+     <p id="form_error" class="error"></p>
+
+    <p class="list">Detail of Registration Form</p>
+    <table class="tdata" id="addList">
+
+
+    </table>
+    <script src="form.js"></script>
+</body>
+</html>
